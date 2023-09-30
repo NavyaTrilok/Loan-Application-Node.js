@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "391e843d-1f98-4e9f-940e-f03cf30a8cfb",
+		"name": "LoanApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24916464"
+	},
+	"item": [
+		{
+			"name": "GET specific loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/loans/651778bad881b9f6a328ac37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"651778bad881b9f6a328ac37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\":\"Vivain Ross\",\n    \"phoneNumber\":\"12345678\",\n    \"address\":\"BethPage, New York\",\n    \"loanAmount\":\"15000\",\n    \"interest\": 5,\n    \"loanTermYears\":10,\n    \"loanType\":\"Education\",\n    \"description\":\"Education Loan for Vivain\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update loan details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\":\"Dhatri Srivastav\",\n    \"phoneNumber\": 12345678,\n    \"address\": \"Phoenix, Arizona\",\n    \"loanAmount\": 10000,\n    \"interest\": 2.5,\n    \"loanTermYears\": 6,\n    \"loanType\": \"Home\",\n    \"description\": \"Home Loan for Dhatri - Updated description\"\n\n} \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/loans/651778bad881b9f6a328ac37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"651778bad881b9f6a328ac37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE specific loan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/loans/65177a72d881b9f6a328ac41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"65177a72d881b9f6a328ac41"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
